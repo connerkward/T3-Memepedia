@@ -1,22 +1,17 @@
-function App() {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout"
+import MemePage from "./pages/MemePage";
+import SearchPage from "./pages/SearchPage";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>
-          Hello world!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<SearchPage />} />
+          <Route path="meme" element={<MemePage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;

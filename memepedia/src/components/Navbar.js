@@ -1,23 +1,19 @@
+import {Link } from "react-router-dom";
+import { BottomNavigation } from '@mui/material';
+import { BottomNavigationAction } from '@mui/material';
 
-function App() {
+function Navbar() {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
-        </div>
+        // this was my homemade one
+        <nav>
+            <div>
+                <Link to="/">SearchPage</Link>
+            </div>
+            <div>
+                <Link to="/meme">MemePage</Link>
+            </div>
+        </nav>
     );
 }
 
-export default App;
+export default Navbar;
