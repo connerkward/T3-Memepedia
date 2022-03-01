@@ -33,7 +33,6 @@ nav .nav-item.active {
 /* CARDS ====================== */
 .card {
   display: flex;
-  /* flex-direction: row; */
   background-color: #fff;
   height: 80px;
   width: 80px;
@@ -161,4 +160,27 @@ nav .nav-item.active {
   100% {
     height: 0px;
   }
+}
+.memeCard {
+  background-color: #fff;
+  height: 300px;
+  width: 300px;
+  color: #333;
+  border-radius: 18px;
+  padding: 10px 10px;
+  margin: 20px 20px;
+  position: relative;
+}
+
+.likeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cardInfo {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
