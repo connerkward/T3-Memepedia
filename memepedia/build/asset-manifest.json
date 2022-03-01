@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.68137555.css",
+    "main.js": "/static/js/main.0c6ac42d.js",
+    "static/media/1_JzjHe3oYacjlJITIht-DQw.png": "/static/media/1_JzjHe3oYacjlJITIht-DQw.77dee5b9ca30634aaf76.png",
+    "static/media/Best-Spider-Man-Memes.png.webp": "/static/media/Best-Spider-Man-Memes.png.8d063a176efb074ba841.webp",
+    "index.html": "/index.html",
+    "main.68137555.css.map": "/static/css/main.68137555.css.map",
+    "main.0c6ac42d.js.map": "/static/js/main.0c6ac42d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68137555.css",
+    "static/js/main.0c6ac42d.js"
+  ]
+}
