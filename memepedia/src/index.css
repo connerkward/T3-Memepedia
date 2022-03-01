@@ -7,12 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-
+/* NAV ====================== */
 nav {
   background-color: rgb(211, 211, 211);
   display: flex;
@@ -21,13 +16,13 @@ nav {
   height: 10vh;
   position: fixed;
   bottom: 0;
+  z-index: 5;
 }
 
 nav .nav-item {
   text-align: center;
   background-color: azure;
-  height: 100%
-    /* margin: 0.5rem; */
+  height: 100%;
 }
 
 nav .nav-item.active {
@@ -35,26 +30,135 @@ nav .nav-item.active {
   color: white;
 }
 
+/* CARDS ====================== */
 .card {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   background-color: #fff;
-  height: 130px;
-  width: 130px;
+  height: 80px;
+  width: 80px;
   color: #333;
-  border-radius: 18px;
-  padding: 10px 10px;
-  margin: 20px 20px;
-  position: relative;
+  border-radius: 2vw;
+  /* padding: 10px 10px; */
+  /* margin: 20px 20px; */
+  /* position: relative; */
+  overflow: hidden;
+}
+
+.card img {
+  object-fit: cover;
 }
 
 .cardRow {
   display: flex;
   flex-direction: row;
+  gap: 1rem;
+  margin: 1rem;
+  overflow: hidden;
+  width: none;
+  /* scrollbar-width: none; */
 }
 
+/* SEARCH ====================== */
+.searchPage {}
+
 .searchBar {
-  margin: auto;
-  width: 30%;
-  padding: 10px;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  /* width: 100%; */
+  margin-right: 10vw;
+  margin-left: 10vw;
+  justify-content: center;
+  /* background-color: grey; */
+  /* border-radius: 2vw; */
+  /* overflow: hidden; */
+}
+
+.searchBar .searchInput {
+  width: 80%;
+  border: none;
+  background-color: grey;
+  border-radius: 2vw 0px 0px 2vw;
+}
+
+.searchBar .searchInputUploadActive {
+  width: 80%;
+  background-color: #333;
+  border: none;
+  border-radius: 2vw 0px 0px 0px;
+
+}
+
+.searchBar button {
+  width: 20%;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  border-radius: 0px 2vw 0px 0px;
+}
+
+
+/* I'm not sure this is the proper way to do this, but I did it. */
+.uploadPanelInactive {
+  animation: slideOutByHeight ease-in-out 0.4s;
+  height: 0px;
+  position: absolute;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  width: 80vw;
+  display: none;
+}
+
+.uploadPanel {
+  animation: slideInByHeight ease-in-out 0.4s;
+  background-color: #333;
+  width: 80vw;
+  height: 200px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  position: absolute;
+  border-radius: 0px 0px 5px 5px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.uploadPanel .uploadButton {
+  position: relative;
+  z-index: 4;
+  /* align-self: center; */
+  /* justify-content: center; */
+  /* padding: 4rem; */
+  color: rgb(211, 211, 211);
+  background-color: #04AA6D;
+}
+
+.uploadPanel .uploadText {
+  color: #fff;
+
+}
+
+/* Search Animations */
+
+@keyframes slideInByHeight {
+  0% {
+    height: 0px;
+  }
+
+  100% {
+    height: 200px;
+  }
+}
+
+@keyframes slideOutByHeight {
+  0% {
+    height: 200px;
+  }
+
+  100% {
+    height: 0px;
+  }
 }
